@@ -1,0 +1,20 @@
+{
+  "name": "@polatengin/idaho-utility-2",
+  "version": "1.0.0",
+  "description": "Idaho Utility Package 2",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polatengin/idaho"
+  },
+  "keywords": [
+    "utility",
+    "github",
+    "packages"
+  ],
+  "author": "polatengin",
+  "license": "MIT"
+}
