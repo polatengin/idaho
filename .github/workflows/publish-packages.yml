@@ -19,11 +19,15 @@ jobs:
           node-version: 18
 
       - name: Authenticate with GitHub Packages
-        run: echo "//npm.pkg.github.com/:_authToken=\${{ secrets.REPO_PACKAGE_TOKEN }}" >> ~/.npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=\${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
 
       - name: Install Dependencies
         working-directory: ./src/utility-1
         run: npm ci
+
+      - name: Debugging
+        working-directory: ./src/utility-1
+        run: cat ~/.npmrc
 
       - name: Publish Package 1
         working-directory: ./src/utility-1
@@ -41,7 +45,7 @@ jobs:
           node-version: 18
 
       - name: Authenticate with GitHub Packages
-        run: echo "//npm.pkg.github.com/:_authToken=\${{ secrets.REPO_PACKAGE_TOKEN }}" >> ~/.npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=\${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
 
       - name: Install Dependencies
         working-directory: ./src/utility-2
