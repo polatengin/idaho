@@ -22,7 +22,7 @@ jobs:
         run: echo "//npm.pkg.github.com/:_authToken=\${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm i
 
       - name: Publish Package 1
         run: npm publish --access public --tag latest --prefix ./src/utility-1
@@ -42,7 +42,7 @@ jobs:
         run: echo "//npm.pkg.github.com/:_authToken=\${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm i
 
       - name: Publish Package 2
         run: npm publish --access public --tag latest --prefix ./src/utility-2
